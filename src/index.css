@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-exo2: 'Exo 2', sans-serif;
+
+  --color-accent: #E9FF7A;
+
+  /* Purple Shades */
+  --color-purple-heart-50: #eef0ff;
+  --color-purple-heart-100: #e1e4fe;
+  --color-purple-heart-200: #c9cefc;
+  --color-purple-heart-300: #a8adf9;
+  --color-purple-heart-400: #8584f5;
+  --color-purple-heart-500: #7267ed;
+  --color-purple-heart-600: #634be0;
+  --color-purple-heart-700: #5239c2;
+  --color-purple-heart-800: #4633a0;
+  --color-purple-heart-900: #3b307f;
+  --color-purple-heart-950: #241c4a;
+
+  /* Lime Shades*/
+  --color-honeysuckle-50: #fdffe5;
+  --color-honeysuckle-100: #f7ffc8;
+  --color-honeysuckle-200: #e9ff7a;
+  --color-honeysuckle-300: #ddfb5b;
+  --color-honeysuckle-400: #cbf229;
+  --color-honeysuckle-500: #acd80a;
+  --color-honeysuckle-600: #86ad03;
+  --color-honeysuckle-700: #648308;
+  --color-honeysuckle-800: #50670d;
+  --color-honeysuckle-900: #435710;
+  --color-honeysuckle-950: #233102;
+
+}
+
+@layer base {
+  body {
+    @apply font-exo2 bg-purple-heart-50 text-purple-heart-950 selection:bg-lime-100 selection:text-purple-950;
+  }
+
+  .bg-gradient {
+    @apply bg-gradient-to-r from-violet-600 to-indigo-600;
+  }
+  .primary-heading {
+    @apply font-bold text-3xl font-semibold text-purple-heart-50 tracking-tight text-center uppercase;
+  }
+  .header-text {
+    @apply text-purple-heart-50 text-sm font-semibold px-4 bg-black/30 py-4 rounded-md border-1 border-accent leading-[1.5];
+  }
+  .tag {
+    @apply bg-purple-heart-50/50 text-honeysuckle-950 w-max px-4 py-1 rounded-xl text-base;
+  }
+}
+
+@layer component {
+  .btn-primary {
+    @apply bg-blue-500 text-white p-2;
+  }
+
+
+}
