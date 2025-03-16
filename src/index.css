@@ -43,13 +43,34 @@
     @apply bg-gradient-to-r from-violet-600 to-indigo-600;
   }
   .primary-heading {
-    @apply font-bold text-3xl font-semibold text-purple-heart-50 tracking-tight text-center uppercase;
+    @apply font-bold text-3xl font-semibold text-purple-heart-50 tracking-tight text-center uppercase sm:text-4xl md:text-5xl lg:text-6xl;
   }
   .header-text {
-    @apply text-purple-heart-50 text-sm font-semibold px-4 bg-black/30 py-4 rounded-md border-1 border-accent leading-[1.5];
+    @apply text-purple-heart-50 text-base font-semibold leading-[1.5] md:text-lg;
   }
   .tag {
     @apply bg-purple-heart-50/50 text-honeysuckle-950 w-max px-4 py-1 rounded-xl text-base;
+  }
+  .search-form {
+    @apply border-2 border-accent px-3 py-2 bg-black/40 rounded-xl flex items-center justify-between gap-2 w-full mt-8 hover:bg-black/25  transition duration-300 max-w-lg;
+  }
+  .num-card {
+    @apply p-8 bg-black/50 rounded-md border-1 border-accent flex flex-col items-start gap-4 w-max sm:flex-row sm:gap-6 sm:p-12 md:flex-col md:gap-4 md:px-6 lg:flex-row;
+  }
+  .search-input {
+    @apply caret-accent py-2 outline-none text-white text-base font-semibold grow;
+  }
+  .cta-btn {
+    @apply bg-accent text-black/90 py-1 px-3 rounded-full flex items-center gap-6 hover:bg-accent/80  transition duration-300 hover:-translate-y-1 hover:scale-102;
+  }
+  .cta-btn-text {
+    @apply text-3xl font-semibold leading-[1.5] uppercase tracking-tight;
+  }
+  .social-icons-box {
+    @apply flex items-center px-2 py-1 gap-5 border-1 border-white rounded-xl w-max sm:px-4 sm:py-2;
+  }
+  .social-icon-circle {
+    @apply flex items-center justify-center w-8 h-8 rounded-full border-2 border-white text-white  sm:w-12 sm:h-12;
   }
 }
 
