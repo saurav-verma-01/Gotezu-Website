@@ -43,7 +43,7 @@
     @apply bg-gradient-to-r from-violet-600 to-indigo-600;
   }
   .primary-heading {
-    @apply font-bold text-3xl font-semibold text-purple-heart-50 tracking-tight text-center uppercase sm:text-4xl md:text-5xl lg:text-6xl;
+    @apply font-bold text-3xl font-semibold text-purple-heart-50 tracking-tight text-center uppercase sm:text-4xl md:text-5xl lg:text-[84px] leading-[1.2];
   }
   .header-text {
     @apply text-purple-heart-50 text-base font-semibold leading-[1.5] md:text-lg;
@@ -72,7 +72,34 @@
   .social-icon-circle {
     @apply flex items-center justify-center w-8 h-8 rounded-full border-2 border-white text-white  sm:w-12 sm:h-12;
   }
+
+  .subheading {
+    @apply bg-gradient-to-tr from-yellow-500 via-purple-500 to-orange-500 text-transparent bg-clip-text text-3xl font-semibold leading-[1.5] text-center tracking-tight max-w-sm md:mt-8 sm:text-4xl sm:max-w-md md:text-5xl md:max-w-xl lg:text-6xl lg:max-w-6xl;
+  }
+  .section-text{
+    @apply text-base text-center my-4 max-w-sm leading-[1.6] md:text-lg md:max-w-md md:my-8 lg:text-2xl lg:max-w-4xl;
+  }
+  .card-text {
+    @apply text-base text-center max-w-sm leading-[1.6] md:text-lg md:max-w-md ;
+  }
+  .about-card {
+    @apply bg-white text-purple-heart-950 rounded-md shadow-md max-w-sm leading-[1.6] relative;
+  }
+  .card-title {
+    @apply text-xl font-bold leading-[1.5];
+  }
+
+  .features-card {
+    @apply bg-transparent text-purple-heart-950 rounded-md shadow-md max-w-sm leading-[1.6] relative flex  flex-col gap-4 h-full;
+  }
+  .feature-card-title {
+    @apply text-xl font-bold leading-[1.5] text-purple-heart-950;
+  }
+
 }
+/*
+
+*/
 
 @layer component {
   .btn-primary {

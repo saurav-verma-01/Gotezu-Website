@@ -23,7 +23,7 @@ const Hero = () => {
                     </div>
                     <div className="flex flex-col items-center">
                         <p className="tag mt-4">Ready to meet yours?</p>
-                        <CtaBtn />
+                        <CtaBtn title="Book Now" />
                     </div>
                 </div>
 
