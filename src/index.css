@@ -36,7 +36,7 @@
 
 @layer base {
   body {
-    @apply font-exo2 bg-purple-heart-50 text-purple-heart-950 selection:bg-lime-200 selection:text-purple-950;
+    @apply font-exo2 bg-purple-heart-50 text-purple-heart-950 selection:bg-lime-200 selection:text-purple-950 overflow-x-hidden;
   }
 
   .bg-gradient {
