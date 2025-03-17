@@ -14,21 +14,35 @@ import Client12 from '../assets/logos/client-12-removebg-preview.png';
 import Client13 from '../assets/logos/client-13-removebg-preview.png';
 import Client14 from '../assets/logos/client-14-removebg-preview.png';
 import Client16 from '../assets/logos/client-16-removebg-preview.png';
+import {motion} from "framer-motion";
 
 const clientLogos = [
     Client1, Client2, Client3, Client4, Client5, Client6, Client7, Client8,
-    Client9, Client10, Client11, Client12, Client13, Client14,  Client16
+    Client9, Client10, Client11, Client12, Client13, Client14,  Client16,
 ];
 
 const Clients = () => {
     return (
         <section className="my-8 lg:my-16 max-w-8xl mx-auto overflow-hidden">
             <h2 className="subheading mx-auto">Trusted by Leaders, Chosen for Excellence</h2>
-            <div className="flex my-8 gap-4 md:my-12 overflow-x-hidden">
+            <motion.div className="flex my-8 gap-4 md:my-12" animate={{
+                translateX: "-50%"
+            }}
+                transition={{
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: 'linear',
+                    repeatType: 'loop',
+            }}
+                >
+                {clientLogos.map((logo, index) => (
+                    <img key={index} src={logo} alt={`Client ${index + 1}`} className="h-16 md:h-20 lg:h-24 w-auto " />
+                ))}
+                {/* Second Set for Animations*/}
                 {clientLogos.map((logo, index) => (
                     <img key={index} src={logo} alt={`Client ${index + 1}`} className="h-16 md:h-20 lg:h-24 w-auto object-contain" />
                 ))}
-            </div>
+            </motion.div>
         </section>
     )
 }
