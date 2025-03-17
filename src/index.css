@@ -36,7 +36,7 @@
 
 @layer base {
   body {
-    @apply font-exo2 bg-purple-heart-50 text-purple-heart-950 selection:bg-lime-100 selection:text-purple-950;
+    @apply font-exo2 bg-purple-heart-50 text-purple-heart-950 selection:bg-lime-200 selection:text-purple-950;
   }
 
   .bg-gradient {
@@ -80,7 +80,7 @@
     @apply text-base text-center my-4 max-w-sm leading-[1.6] md:text-lg md:max-w-md md:my-8 lg:text-2xl lg:max-w-4xl;
   }
   .card-text {
-    @apply text-base text-center max-w-sm leading-[1.6] md:text-lg md:max-w-md ;
+    @apply text-base text-center max-w-sm leading-[1.6] md:text-lg md:max-w-xl ;
   }
   .about-card {
     @apply bg-white text-purple-heart-950 rounded-md shadow-md max-w-sm leading-[1.6] relative;

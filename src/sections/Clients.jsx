@@ -22,7 +22,7 @@ const clientLogos = [
 
 const Clients = () => {
     return (
-        <section className="my-8 lg:my-16">
+        <section className="my-8 lg:my-16 max-w-8xl mx-auto overflow-hidden">
             <h2 className="subheading mx-auto">Trusted by Leaders, Chosen for Excellence</h2>
             <div className="flex my-8 gap-4 md:my-12 overflow-x-hidden">
                 {clientLogos.map((logo, index) => (
