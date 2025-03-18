@@ -8,11 +8,12 @@ import Empower from "./sections/Empower.jsx";
 import Testimonials from "./sections/Testimonials.jsx";
 import Faqs from "./sections/Faqs.jsx";
 import Contacts from "./sections/Contacts.jsx";
+import NewHero from "./sections/NewHero.jsx";
 
 const App = () => {
     return (
         <>
-            <Hero />
+            <NewHero />
             <About />
             <Clients />
             <Features />
@@ -21,6 +22,7 @@ const App = () => {
             <Testimonials />
             <Faqs />
             <Contacts />
+
         </>
     )
 }

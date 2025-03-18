@@ -38,12 +38,12 @@ const Faqs = () => {
         setOpenID(prev => (prev === id ? null : id));
     }
     return (
-        <section className="my-8 lg:my-16 w-full">
-            <div className="max-w-7xl mx-auto">
+        <section className="my-8 lg:my-16 w-full min-h-screen px-8 py-16">
+            <div className="max-w-7xl mx-auto ">
             <div className="flex justify-center my-8">
                 <h2 className="subheading">Frequently Asked Questions</h2>
             </div>
-            <div className="md:rounded-xl bg-gradient md:pt-4">
+            <div className="md:rounded-xl bg-gradient  md:pt-4">
                 <div className="flex flex-col gap-8 md:flex-row  items-center justify-center ">
                     <div className="flex items-center justify-center py-8 md:justify-end">
                         <img src={Faq1} alt="FAW Image" className="max-w-100 w-full"/>
