@@ -12,10 +12,10 @@ const About = () => {
                 <p className="section-text">Finding the right trainer shouldn’t be complicated. Tell us your needs, choose your expert (or let AI do it), and start learning. No hassle —just the right training, done right.</p>
             </div>
             <div className="lg:flex lg:items-start">
-                <div className="px-4 py-8 flex flex-col items-center justify-center gap-4">
+                <div className="px-4 py-8 flex flex-col items-center justify-center gap-8">
                     <img src={About1} alt="About Image" className="w-full max-w-sm object-cover" />
-                    <div>
-                        <p className="card-text my-8">At Gotezu, we connect companies with expert trainers—AI-powered or handpicked—for real learning that drives growth.</p>
+                    <div className="bg-gradient text-honeysuckle-100 px-4 py-4 rounded-md max-w-md">
+                        <p className="card-text">At Gotezu, we connect companies with expert trainers—AI-powered or handpicked—for real learning that drives growth.</p>
                     </div>
                     <img src={About2} alt="About Image" className="w-full max-w-md object-cover"/>
                 </div>

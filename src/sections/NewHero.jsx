@@ -9,15 +9,15 @@ const NewHero = () => {
     return (
         <section className="min-h-screen lg:px-8 lg:py-16 max-w-[1440px] mx-auto ">
             <div className=" min-h-screen lg:rounded-2xl bg-gradient">
-               <div className="py-8 bg-white/15 border-b-4 border-accent">
+               <div className="py-8 border-b-4 border-accent px-8 flex items-center justify-center bg-white/15">
                    <h1 className="primary-heading">Find Your Perfect Trainer with AI</h1>
                </div>
                 <div className="grid lg:grid-cols-3 min-h-screen md:grid-cols-2 grid-cols-1">
 
                     {/* Image */}
-                    <div className="my-4 md:col-span-2 lg:col-span-1 flex items-center justify-center ">
+                    <div className="my-4 md:col-span-2 lg:col-span-1 flex items-center justify-center flex-col relative">
                         <img src={Hero2} alt="Hero Image" className="object-cover h-full max-h-[500px]"/>
-                        {/*<CtaBtn title="Book Now" />*/}
+                        <CtaBtn title="Book Now" className="md:absolute md:-bottom-4 md:scale-125" />
                     </div>
 
                     <div className="px-4 py-8 grow flex flex-col lg:items-start lg:-order-1 items-center md:items-start">

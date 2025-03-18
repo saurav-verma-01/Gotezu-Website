@@ -44,7 +44,8 @@
   }
   .primary-heading {
     /*@apply font-bold text-3xl font-semibold text-purple-heart-50 tracking-tight text-center uppercase sm:text-4xl md:text-5xl lg:text-[84px] leading-[1.2];*/
-    @apply text-purple-heart-50 uppercase lg:text-7xl tracking-tight font-semibold text-center leading-[1.2];
+    @apply text-purple-heart-50 uppercase lg:text-7xl tracking-tight font-semibold text-center leading-[1.2]
+    text-4xl  sm:text-5xl  md:text-6xl ;
   }
   .header-text {
     @apply text-purple-heart-50 text-sm md:text-lg leading-[1.5] lg:text-xl;
@@ -88,7 +89,7 @@
     @apply text-base text-center my-4 max-w-sm leading-[1.6] md:text-lg md:max-w-md md:my-8 lg:text-2xl lg:max-w-4xl;
   }
   .card-text {
-    @apply text-base text-center max-w-sm leading-[1.6] md:text-lg md:max-w-xl ;
+    @apply text-base text-center max-w-sm leading-[1.6] md:text-lg md:max-w-xl lg:text-xl;
   }
   .about-card {
     @apply bg-white text-purple-heart-950 rounded-md shadow-md max-w-sm leading-[1.6] relative;
@@ -98,7 +99,7 @@
   }
 
   .features-card {
-    @apply bg-transparent text-purple-heart-950 rounded-md shadow-md max-w-sm leading-[1.6] relative flex  flex-col gap-4 h-full;
+    @apply bg-transparent text-purple-heart-950 rounded-md shadow-md max-w-sm leading-[1.6] relative flex  flex-col gap-4 h-full md:max-w-xl;
   }
   .feature-card-title {
     @apply text-xl font-bold leading-[1.5] text-purple-heart-950;

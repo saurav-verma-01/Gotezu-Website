@@ -5,8 +5,8 @@ const Empower = () => {
     return (
         <section className="my-8 lg:my-20 ">
             <div className="px-4 md:px-2 flex flex-col gap-8 items-center justify-center lg:flex-row lg:justify-center lg:items-center relative max-w-7xl mx-auto">
-                <div className="bg-gradient w-full h-full py-16 px-4 max-w-2xl rounded-md flex items-center justify-center">
-                    <img src={Empower1} alt="Empower Picture" className="max-h-140 lg:max-h-150" />
+                <div className="w-full h-full py-16 px-4 max-w-2xl rounded-md flex items-center justify-center">
+                    <img src={Empower1} alt="Empower Picture" className="max-h-140 lg:max-h-200" />
                 </div>
 
                 <div className="flex flex-col gap-8 items-center justify-center md:flex-row md:flex-wrap lg:justify-start p-4">
@@ -15,7 +15,7 @@ const Empower = () => {
                         { title: "Only the Best, Guaranteed", text: "Finding the right trainer shouldn’t feel like a gamble. That’s why we only bring you industry experts with proven track records. Every trainer is pre-vetted, results-driven, and committed to delivering real impact—so you invest in training that works." },
                         { title: "Training That Fits You", text: "No rigid formats, no one-size-fits-all. Whether it’s on-site, virtual, or hybrid, our training adapts to your team’s schedule and workflow. Learning should enhance productivity, not disrupt it—so we make sure your employees can apply new skills from day one." }
                     ].map(({ title, text }, index) => (
-                        <div className="features-card lg:w-full lg:max-w-full">
+                        <div className="features-card">
                             <div
                                 className="absolute -inset-2 rounded-lg bg-gradient-to-tr from-slate-600 via-yellow-600 to-green-600 opacity-50 blur-2xl w-full h-full"
                             ></div>
