@@ -8,3 +8,6 @@
   - About 
   - Clients 
   - Features 
+- Home Page
+- Trainers Page
+- Navigation Bar

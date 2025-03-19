@@ -209,7 +209,7 @@ const trainersData = [
 const TrainersContainer = () => {
     return (
         <div
-            className="py-8 px-4 grid grid-cols-1 place-items-center gap-8 md:grid-cols-[300px_300px] xl:grid-cols-[300px_300px_300px] xl:gap-x-4 justify-center lg:pt-0"
+            className="py-8 px-4 grid grid-cols-1 place-items-center gap-8 md:grid-cols-[300px_300px]  justify-center lg:pt-0"
         >
             {
                 trainersData.map((trainer) =>  <TrainersCard key={trainer.id} {...trainer} />)

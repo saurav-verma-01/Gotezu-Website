@@ -8,16 +8,16 @@ const TrainersCard = ({name, experience, expertise, rating, image}) => {
         <div className="max-w-[300px] shadow-2xl relative h-full w-full">
 
                 <div
-                    className="absolute -inset-2 rounded-lg bg-gradient-to-bl from-purple-600 via-pink-600 to-lime-600 opacity-50 blur-2xl"
+                    className="absolute -inset-2 rounded-2xl bg-gradient-to-bl from-purple-600 via-pink-600 to-lime-600 opacity-30 blur-xl"
                 ></div>
                 <div className="relative bg-white flex flex-col gap-4 rounded-lg py-3 px-2 h-full   flex-grow justify-between">
                     <div className="bg-gradient flex justify-center rounded-2xl border-2 border-accent h-44">
                         <img src={image} alt={`Trainer ${name}`}/>
                     </div>
-                    <div className="flex justify-center items-center border-2 border-b-purple-heart-950 p-3 rounded-xl">
-                        <h2 className="text-2xl text-center font-semibold">{expertise}</h2>
+                    <div className="flex justify-center items-center border-1 border-b-purple-heart-950 p-3 rounded-4xl">
+                        <h2 className="text-lg text-center font-semibold">{expertise}</h2>
                     </div>
-                    <div className="flex flex-col items-center gap-1 border-b-2 border-purple-heart-950 pb-4 mt-auto">
+                    <div className="flex flex-col items-center gap-1 border-b-1 border-dotted border-purple-heart-950 pb-4 mt-auto">
                         <h3 className="text-xl font-semibold">{name}</h3>
                         <h4 className="text-base font-semibold">{experience}</h4>
                     </div>

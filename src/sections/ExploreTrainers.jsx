@@ -4,8 +4,8 @@ import CtaBtn from "../components/CtaBtn.jsx";
 
 const ExploreTrainers = () => {
     return (
-        <section className="my-4 min-h-screen px-8 py-16">
-           <div className="relative max-w-7xl mx-auto rounded-xl overflow-hidden flex flex-col items-center bg-gradient px-2 py-4 lg:px-0 lg:pt-0">
+        <section className="my-4 min-h-screen md:px-8 md:py-16  max-w-7xl mx-auto">
+           <div className="relative md:rounded-xl overflow-hidden flex flex-col items-center bg-gradient px-2 py-4 lg:px-0 lg:pt-0">
                <div className="bg-black/50 py-6 rounded-lg px-4 sm:px-8 lg:bg-white/30 lg:w-full lg:py-10">
                    <h2 className="text-honeysuckle-50 font-semibold uppercase text-3xl sm:text-4xl text-center tracking-tight leading-[1.2] md:text-5xl lg:text-7xl">Meet Our Expert Trainers</h2>
                </div>

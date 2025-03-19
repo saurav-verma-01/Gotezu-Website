@@ -8,10 +8,12 @@ import Empower from "../sections/Empower.jsx";
 import Testimonials from "../sections/Testimonials.jsx";
 import Faqs from "../sections/Faqs.jsx";
 import Contacts from "../sections/Contacts.jsx";
+import NavBar from "../sections/NavBar.jsx";
 
 const Home = () => {
     return (
         <>
+            <NavBar />
             <NewHero />
             <About />
             <Clients />
