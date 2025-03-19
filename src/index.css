@@ -128,7 +128,9 @@
   .feature-card-title {
     @apply text-xl font-bold leading-[1.5] text-purple-heart-950;
   }
-
+  .filter-btn {
+    @apply text-sm font-semibold leading-[1.5] py-1 px-2.5 border-2 border-honeysuckle-100 rounded-full bg-accent text-purple-heart-950;
+  }
 }
 /*
 
@@ -141,3 +143,4 @@
 
 
 }
+

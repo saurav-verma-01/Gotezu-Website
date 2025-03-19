@@ -4,9 +4,9 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { PiTelegramLogo } from "react-icons/pi";
 
-const SocialIconBox = () => {
+const SocialIconBox = ( { className = ""}) => {
     return (
-        <div className="social-icons-box">
+        <div className={`social-icons-box ${className}`}>
             <div className="social-icon-circle">
                 <FaWhatsapp className="w-5 h-5" />
             </div>

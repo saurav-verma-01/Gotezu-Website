@@ -4,9 +4,9 @@ import Circle2 from '../assets/circle2.svg';
 import Circle3 from '../assets/circle3.png';
 import Circle4 from '../assets/circle4.png';
 
-const IconBox = () => {
+const IconBox = ({ className = ""}) => {
     return (
-        <div className="grid-cols-2 p-2 w-max h-max gap-2 rounded-lg border-2 border-accent lg:mt-auto mt-8 hidden md:grid">
+        <div className={`grid-cols-2 p-2 w-max h-max gap-2 rounded-lg border-2 border-accent lg:mt-auto mt-8 hidden md:grid ${className}`}>
             <div className="w-18 h-18 border-2 rounded-full flex items-center justify-center bg-accent border-honeysuckle-50">
                 <img src={Circle1} alt="icon image" />
             </div>
