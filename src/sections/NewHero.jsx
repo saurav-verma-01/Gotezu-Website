@@ -7,7 +7,7 @@ import SearchBar from "../components/SearchBar.jsx";
 import IconBox from "../components/IconBox.jsx";
 const NewHero = () => {
     return (
-        <section className="min-h-screen lg:px-8 lg:py-16 max-w-[1440px] mx-auto ">
+        <section className="min-h-screen lg:px-4 lg:py-12 max-w-[1440px] mx-auto ">
             <div className=" min-h-screen lg:rounded-2xl bg-gradient">
                <div className="py-8 border-b-4 border-accent px-8 flex items-center justify-center bg-white/15">
                    <h1 className="primary-heading">Find Your Perfect Trainer with AI</h1>

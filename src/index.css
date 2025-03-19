@@ -34,9 +34,33 @@
 
 }
 
+
+
+@layer utilities {
+
+  .scrollbar::-webkit-scrollbar {
+    width: 20px;
+  }
+  /* Track */
+  .scrollbar::-webkit-scrollbar-track {
+    background: #241c4a;
+  }
+
+  /* Scrollbar thumb */
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #ddfb5b;
+    border-radius: 4px;
+  }
+
+  /* Hover effect */
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #8584f5; /* Tailwind gray-700 */
+  }
+}
+
 @layer base {
   body {
-    @apply font-exo2 bg-purple-heart-50 text-purple-heart-950 selection:bg-lime-200 selection:text-purple-950 overflow-x-hidden;
+    @apply font-exo2 bg-purple-heart-50 text-purple-heart-950 selection:bg-lime-200 selection:text-purple-950 overflow-x-hidden scroll-smooth ;
   }
 
   .bg-gradient {
