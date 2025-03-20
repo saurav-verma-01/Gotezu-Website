@@ -4,7 +4,7 @@ import { FaEnvelope, FaPhoneAlt, FaCommentDots, FaMapMarkerAlt } from "react-ico
 
 const Contacts = () => {
     return (
-        <section className="py-8 max-w-7xl mx-auto">
+        <section className="py-8 max-w-7xl mx-auto my-8">
             <div className="px-8 flex flex-col gap-6 items-center lg:grid lg:grid-cols-2">
 
 

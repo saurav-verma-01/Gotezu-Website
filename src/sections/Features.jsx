@@ -5,7 +5,7 @@ import CtaBtn from "../components/CtaBtn.jsx";
 
 const Features = () => {
     return (
-        <section className="my-8 lg:my-16 flex flex-col gap-8 items-center">
+        <section className="my-8 lg:my-10 flex flex-col gap-8 items-center">
             <div className="flex flex-col items-center justify-center w-full ">
                 <h2 className="subheading">We Don’t Just Connect You to Trainers—We Ensure You Find the Best</h2>
                 <div className="px-4">

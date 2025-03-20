@@ -3,10 +3,10 @@ import Empower1 from '../assets/Empower1.png';
 
 const Empower = () => {
     return (
-        <section className="my-8 lg:my-20 ">
-            <div className="px-4 md:px-2 flex flex-col gap-8 items-center justify-center lg:flex-row lg:justify-center lg:items-center relative max-w-7xl mx-auto">
-                <div className="w-full h-full py-16  max-w-2xl rounded-md flex items-center justify-center">
-                    <img src={Empower1} alt="Empower Picture" className="max-h-140 lg:max-h-200" />
+        <section className="my-8">
+            <div className=" px-4 md:px-2 flex flex-col gap-8 items-center justify-center lg:flex-row lg:justify-center lg:items-center relative max-w-7xl mx-auto">
+                <div className="w-full h-full lg:p-8  max-w-2xl rounded-md flex items-center justify-center">
+                    <img src={Empower1} alt="Empower Picture" className="max-h-140 lg:max-h-full" />
                 </div>
 
                 <div className="flex flex-col gap-8 items-center justify-center md:flex-row md:flex-wrap lg:justify-start py-4">

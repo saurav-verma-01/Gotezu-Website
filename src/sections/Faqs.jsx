@@ -38,7 +38,7 @@ const Faqs = () => {
         setOpenID(prev => (prev === id ? null : id));
     }
     return (
-        <section className="my-8 lg:my-16 w-full min-h-screen md:px-8 md:py-16">
+        <section className="my-8 w-full min-h-screen md:px-8">
             <div className="max-w-7xl mx-auto ">
             <div className="flex justify-center my-8">
                 <h2 className="subheading">Frequently Asked Questions</h2>

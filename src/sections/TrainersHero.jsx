@@ -7,7 +7,7 @@ const TrainersHero = () => {
     return (
         <section
             className="lg:px-12 lg:py-12">
-            <div className="max-w-[1440px] mx-auto bg-gradient bg-cover bg-center text-honeysuckle-100 relative lg:rounded-lg min-h-screen">
+            <div className="max-w-[1440px] mx-auto bg-gradient bg-cover bg-center text-honeysuckle-100 relative lg:rounded-lg">
 
             <div className="px-4 py-8 border-b-3 border-accent">
                 <h1 className="primary-heading">FIND YOUR PERFECT TRAINER TODAY</h1>

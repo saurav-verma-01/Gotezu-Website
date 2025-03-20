@@ -23,7 +23,7 @@ const clientLogos = [
 
 const Clients = () => {
     return (
-        <section className="my-8 lg:my-16 max-w-8xl mx-auto overflow-hidden">
+        <section className="my-8 max-w-8xl mx-auto overflow-hidden">
             <h2 className="subheading mx-auto">Trusted by Leaders, Chosen for Excellence</h2>
             <motion.div className="flex my-8 gap-4 md:my-12" animate={{
                 translateX: "-50%"

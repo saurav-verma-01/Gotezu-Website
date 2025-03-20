@@ -9,6 +9,7 @@ import Testimonials from "../sections/Testimonials.jsx";
 import Faqs from "../sections/Faqs.jsx";
 import Contacts from "../sections/Contacts.jsx";
 import NavBar from "../sections/NavBar.jsx";
+import Footer from "../sections/Footer.jsx";
 
 const Home = () => {
     return (
@@ -23,6 +24,7 @@ const Home = () => {
             <Testimonials />
             <Faqs />
             <Contacts />
+            <Footer />
         </>
     )
 }
