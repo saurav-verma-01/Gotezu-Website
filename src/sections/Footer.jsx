@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="max-w-6xl mx-auto">
                 <div className="lg:flex">
                     <div className="p-4 flex flex-col gap-8 items-center lg:items-start">
-                        <div className="max-w-sm h-auto border-2 border-accent rounded-xl py-6 px-4 bg-black/30">
+                        <div className="max-w-sm h-auto border-2 border-accent rounded-xl py-6 px-4 bg-purple-heart-50">
                             <img src={Logo} alt="Gotezu Logo" className="w-full h-auto"/>
                         </div>
                         <SocialIconBox className="my-0" />

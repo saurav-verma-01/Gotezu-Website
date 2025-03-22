@@ -131,6 +131,19 @@
   .filter-btn {
     @apply text-sm font-semibold leading-[1.5] py-1 px-2.5 border-2 border-honeysuckle-100 rounded-full bg-accent text-purple-heart-950;
   }
+
+/*  Animated bg*/
+
+
+  .container {
+    width: 100%;
+    height: 100%;
+    /* Add your background pattern here */
+    background-image: repeating-radial-gradient(  #f8f1f1ee 88%,#963fdd 90%);
+    background-size: 50px 50px;
+  }
+
+
 }
 /*
 

@@ -23,13 +23,13 @@ const categories = [
 const ExploreAllTrainers = () => {
     const [selected, setSelected] = useState("");
     return (
-        <section className="min-h-screen">
-            <div className="">
-                <div className="py-8 flex items-center justify-center">
+        <section>
+            <div>
+                <div className="py-8 pt-4 flex items-center justify-center">
                     <h1 className="subheading">Explore Our Trainers</h1>
                 </div>
 
-                <div className="lg:flex items-start justify-center gap-8 xl:gap-4">
+                <div className="lg:flex items-start justify-center gap-8 ">
                     <div className="py-8 pb-12 text-honeysuckle-100 px-4 bg-gradient lg:rounded-xl">
                         <div className="max-w-sm mx-auto flex flex-col gap-6">
                             <div className="flex px-4 py-4 justify-between items-center">
