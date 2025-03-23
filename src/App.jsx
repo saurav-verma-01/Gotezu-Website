@@ -6,6 +6,7 @@ import NavBar from "./sections/NavBar.jsx";
 import Footer from "./sections/Footer.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
 import ContactUsPage from "./pages/ContactUsPage.jsx";
+import IndividualTrainer from "./pages/IndividualTrainer.jsx";
 
 const App = () => {
     return (
@@ -13,7 +14,8 @@ const App = () => {
             {/*<Home />*/}
             {/*<Trainers />*/}
             {/*<AboutUs />*/}
-            <ContactUsPage />
+            {/*<ContactUsPage />*/}
+            <IndividualTrainer />
         </>
     )
 }
