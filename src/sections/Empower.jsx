@@ -15,7 +15,7 @@ const Empower = () => {
                         { title: "Only the Best, Guaranteed", text: "Finding the right trainer shouldn’t feel like a gamble. That’s why we only bring you industry experts with proven track records. Every trainer is pre-vetted, results-driven, and committed to delivering real impact—so you invest in training that works." },
                         { title: "Training That Fits You", text: "No rigid formats, no one-size-fits-all. Whether it’s on-site, virtual, or hybrid, our training adapts to your team’s schedule and workflow. Learning should enhance productivity, not disrupt it—so we make sure your employees can apply new skills from day one." }
                     ].map(({ title, text }, index) => (
-                        <div className="features-card">
+                        <div className="features-card" key={index}>
                             <div
                                 className="absolute -inset-2 rounded-lg bg-gradient-to-tr from-slate-600 via-yellow-600 to-green-600 opacity-50 blur-2xl w-full h-full"
                             ></div>
