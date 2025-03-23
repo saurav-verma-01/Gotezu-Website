@@ -9,7 +9,7 @@ import NavBar from "../sections/NavBar.jsx";
 const ContactUsPage = () => {
     return (
         <section>
-            <NavBar />
+
             <ContactUsHero />
             <div className="py-8 flex items-center justify-center">
                 <ContactCards className="lg:grid-cols-4" />
@@ -17,7 +17,6 @@ const ContactUsPage = () => {
             <ContactsContactForm />
 
             <Faqs />
-            <Footer />
 
         </section>
     )

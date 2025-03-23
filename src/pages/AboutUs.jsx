@@ -11,14 +11,12 @@ import Footer from "../sections/Footer.jsx";
 const AboutUs = () => {
     return (
         <>
-            <NavBar />
             <AboutUsHero />
             <AboutFeatures />
             <AboutEasiest />
             <AboutSolution />
             <Testimonials />
             <Faqs />
-            <Footer />
         </>
     )
 }

@@ -7,10 +7,8 @@ import Footer from "../sections/Footer.jsx";
 const Trainers = () => {
     return (
         <>
-            <NavBar />
             <TrainersHero />
             <ExploreAllTrainers />
-            <Footer />
         </>
     )
 }

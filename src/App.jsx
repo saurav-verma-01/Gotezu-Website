@@ -2,21 +2,40 @@ import React from 'react'
 
 import Home from "./pages/Home.jsx";
 import Trainers from "./pages/Trainers.jsx";
-import NavBar from "./sections/NavBar.jsx";
-import Footer from "./sections/Footer.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
 import ContactUsPage from "./pages/ContactUsPage.jsx";
-import IndividualTrainer from "./pages/IndividualTrainer.jsx";
+import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom";
+import RootLayout from "./Layout/RootLayout.jsx";
 
 const App = () => {
+    const router  = createBrowserRouter([
+        {
+            path: "/",
+            element: <RootLayout />,
+            children: [
+                {
+                    path: "",
+                    element: <Home />,
+                },
+                {
+                    path: "trainers",
+                    element: <Trainers />,
+                },
+                {
+                    path: "about",
+                    element: <AboutUs />,
+                },
+                {
+                    path: "contact",
+                    element: <ContactUsPage />
+                }
+            ]
+        }
+        ]
+    )
+
     return (
-        <>
-            {/*<Home />*/}
-            {/*<Trainers />*/}
-            {/*<AboutUs />*/}
-            {/*<ContactUsPage />*/}
-            <IndividualTrainer />
-        </>
+        <RouterProvider router={router} />
     )
 }
 export default App
