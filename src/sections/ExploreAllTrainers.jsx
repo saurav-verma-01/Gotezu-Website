@@ -29,8 +29,8 @@ const ExploreAllTrainers = () => {
                     <h1 className="subheading">Explore Our Trainers</h1>
                 </div>
 
-                <div className="lg:flex items-start justify-center gap-8 xl:gap-5">
-                    <div className="py-8 pb-12 text-honeysuckle-100 px-4 bg-gradient lg:rounded-xl w-full max-w-sm lg:min-w-xs">
+                <div className="flex flex-col lg:flex-row items-center lg:items-start  justify-center gap-8 xl:gap-5 ">
+                    <div className="py-8 pb-12 text-honeysuckle-100 px-4 bg-gradient rounded-xl w-full max-w-sm lg:min-w-xs">
                         <div className="max-w-sm mx-auto flex flex-col gap-6">
                             <div className="flex px-4 py-4 justify-between items-center">
                                 <h3 className="text-2xl font-semibold">Filters</h3>

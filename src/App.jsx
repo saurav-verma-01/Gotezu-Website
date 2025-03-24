@@ -6,6 +6,8 @@ import AboutUs from "./pages/AboutUs.jsx";
 import ContactUsPage from "./pages/ContactUsPage.jsx";
 import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom";
 import RootLayout from "./Layout/RootLayout.jsx";
+import PricingPage from "./pages/PricingPage.jsx";
+import Signup from "./pages/Signup.jsx";
 
 const App = () => {
     const router  = createBrowserRouter([
@@ -28,6 +30,14 @@ const App = () => {
                 {
                     path: "contact",
                     element: <ContactUsPage />
+                },
+                {
+                    path: "pricing",
+                    element: <PricingPage />
+                },
+                {
+                    path: "signin",
+                    element: <Signup />
                 }
             ]
         }

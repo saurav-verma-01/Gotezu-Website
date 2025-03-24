@@ -11,11 +11,6 @@ const TrainersContainer = () => {
     // Extract the search query from the URL
     const query = searchParams.get("search");
 
-    // if (loading) {
-    //     return <div className="bg-gray-700 max-w-full z-40 h-[200px]">
-    //         <CardLoader />
-    //     </div>;
-    // }
 
     if (error) {
         return <p>Error: {String(error)}</p>;
