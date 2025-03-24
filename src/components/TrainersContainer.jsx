@@ -23,7 +23,7 @@ const TrainersContainer = () => {
     }
 
     return (
-        <div className="py-8 px-4 grid grid-cols-1 md:grid-cols-[350px_350px] xl:grid-cols-[300px_300px_300px] xl:gap-x-8 xl:gap-y-12 gap-8 justify-center ">
+        <div className="py-8 pt-0 px-4 grid grid-cols-1 md:grid-cols-[350px_350px] xl:grid-cols-[300px_300px_300px] xl:gap-x-8 xl:gap-y-12 gap-8 justify-center ">
 
             {searchResults.length > 0 ? (
                 searchResults.map((trainer) => <TrainersCard key={trainer.$id} {...trainer} />)

@@ -4,8 +4,8 @@ import { databases } from "../appwriteConfig";
 
 export const AppwriteContext = createContext();
 
-const DATABASE_ID = "67de62d60014286c437d";
-const COLLECTION_ID = "67de6628002a03ad80fc";
+// const DATABASE_ID = "67de62d60014286c437d";
+// const COLLECTION_ID = "67de6628002a03ad80fc";
 
 export const AppwriteProvider = ({ children }) => {
     const [trainers, setTrainers] = useState([]); // Stores initial 25 trainers
@@ -21,8 +21,8 @@ export const AppwriteProvider = ({ children }) => {
 
         try {
             const response = await databases.listDocuments(
-                DATABASE_ID,
-                COLLECTION_ID,
+                import.meta.env.VITE_APPWRITE_DATABASE_ID,
+                import.meta.env.VITE_APPWRITE_COLLECTION_ID,
                 [Query.limit(25)] // ✅ Fetch only first 25 entries
             );
 
@@ -49,8 +49,8 @@ export const AppwriteProvider = ({ children }) => {
 
             while (true) {
                 const response = await databases.listDocuments(
-                    DATABASE_ID,
-                    COLLECTION_ID,
+                    import.meta.env.VITE_APPWRITE_DATABASE_ID,
+                    import.meta.env.VITE_APPWRITE_COLLECTION_ID,
                     [Query.limit(limit), Query.offset(offset)] // ✅ Paginated fetching
                 );
 
