@@ -9,7 +9,7 @@ const TrainersCard = ({full_name, year_of_experience, skills, ratings, primary_i
 
     console.log(full_name, skills, search_keyword);
     return (
-        <Link to="/individual-trainer" className="max-w-[300px] shadow-2xl relative h-full w-full bg-emerald-400">
+        <Link to="/individual-trainer" className="max-w-[300px] shadow-2xl relative h-full w-full">
 
                 <div
                     className="absolute -inset-2 rounded-2xl bg-gradient-to-bl from-purple-600 via-pink-600 to-lime-600 opacity-30 blur-xl"
