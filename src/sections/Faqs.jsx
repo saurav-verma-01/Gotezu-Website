@@ -54,7 +54,7 @@ const Faqs = () => {
                 </div>
                 <div className="flex justify-center flex-col items-center pb-8">
                     <h2 className="text-honeysuckle-100 text-lg">Got Questions? Let's Clarify!</h2>
-                    <CtaBtn title="Contact Us" />
+                    <CtaBtn title="Contact Us" path="/contact" />
                 </div>
             </div>
             </div>

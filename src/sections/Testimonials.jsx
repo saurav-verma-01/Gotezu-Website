@@ -67,13 +67,24 @@ const testimonials = [
     },
 ];
 
+import {motion } from 'framer-motion'
+
 const column1 = testimonials.slice(0,3);
 const column2 = testimonials.slice(3,6);
 const column3 = testimonials.slice(6,9);
 
 const Testimonials = () => {
+
+    // Duplicate testimonials for seamless looping
+    const duplicatedColumn1 = [...column1, ...column1];
+    const duplicatedColumn2 = [...column2, ...column2];
+    const duplicatedColumn3 = [...column3, ...column3];
+
+    const colHeight = column2.length * 260;
+
+
     return (
-        <section className="my-8">
+        <section className="my-8 ">
             <div className="flex flex-col items-center max-w-8xl mx-auto">
 
                 <div className="px-4 flex flex-col items-center" >
@@ -81,29 +92,61 @@ const Testimonials = () => {
                     <p className="section-text">Hear it from those who’ve seen the change firsthand!</p>
                 </div>
 
-                <div className="flex">
-                    {/*First Column Visibile in Mobile screens*/}
+                <div className="flex w-full relative h-[800px] overflow-hidden justify-center">
+                    {/* First Column - Visible on all screens */}
 
-                    <div className="py-8 px-4 flex flex-col gap-8">
-                        { column1.map((item, index) => (
+                    <motion.div
+                        className="py-8 px-4 flex flex-col gap-8"
+                        animate={{
+                            y:  ["0%", "-50%"],
+                        }}
+                        transition={{
+                            duration: 20,
+                            repeat: Infinity,
+                            ease: "linear",
+                            repeatType: "loop"
+                        }}
+                    >
+                        { duplicatedColumn1.map((item, index) => (
                             <TestimonialCard key={index} {...item} />
                         ))}
-                    </div>
+                    </motion.div>
 
                     {/*Second Column Visibile in Tablet screens*/}
 
-                    <div className="py-8 px-4 hidden md:flex flex-col gap-8">
-                        { column2.map((item, index) => (
+                    <motion.div className="py-8 px-4 hidden md:flex flex-col gap-8"
+                        animate={{
+                            y: ["0%", "-50%"],
+
+                        }}
+                         transition={{
+                             duration: 15,
+                             repeat: Infinity,
+                             ease: "linear",
+                             repeatType: "loop"
+                         }}
+                    >
+                        { duplicatedColumn2.map((item, index) => (
                             <TestimonialCard key={index} {...item} />
                         ))}
-                    </div>
+                    </motion.div>
 
                     {/*Third Column Visibile in Tablet screens*/}
-                    <div className="py-8 px-4 hidden lg:flex flex-col gap-8">
-                        { column3.map((item, index) => (
+                    <motion.div className="py-8 px-4 hidden lg:flex flex-col gap-8"
+                         animate={{
+                             y: ["0%", "-50%"],
+                         }}
+                         transition={{
+                             duration: 25,
+                             repeat: Infinity,
+                             ease: "linear",
+                             repeatType: "loop"
+                         }}
+                    >
+                        { duplicatedColumn3.map((item, index) => (
                             <TestimonialCard key={index} {...item} />
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
 
             </div>

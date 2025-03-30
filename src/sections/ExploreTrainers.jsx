@@ -13,7 +13,7 @@ const ExploreTrainers = () => {
                <div className="bg-black/30 py-4 rounded-lg px-2 max-w-sm  sm:max-w-lg sm:px-4 lg:max-w-2xl lg:py-6 lg:px-12 lg:bg-white/30">
                    <p className="text-honeysuckle-50 text-lg sm:text-xl text-center lg:text-2xl">The Right Trainer Transforms Teams – Find the Perfect Fit to Boost Skills & Growth!</p>
                </div>
-               <CtaBtn title="Explore" className="lg:absolute lg:bottom-22 lg:scale-125" />
+               <CtaBtn path="/trainers" title="Explore" className="lg:absolute lg:bottom-22 lg:scale-125" />
            </div>
         </section>
     )

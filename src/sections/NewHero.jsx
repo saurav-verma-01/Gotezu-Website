@@ -7,17 +7,17 @@ import SearchBar from "../components/SearchBar.jsx";
 import IconBox from "../components/IconBox.jsx";
 const NewHero = () => {
     return (
-        <section className="min-h-screen lg:px-4 lg:py-12 max-w-[1440px] mx-auto ">
+        <section className="min-h-screen lg:px-4 lg:py-12 max-w-[1440px]  mx-auto">
             <div className="lg:rounded-2xl bg-gradient">
                <div className="py-8 border-b-4 border-accent px-8 flex items-center justify-center bg-white/15">
-                   <h1 className="primary-heading">Find Your Perfect Trainer with AI</h1>
+                   <h1 className="primary-heading">Find Your Perfect Trainer with <span className="bg-lime-200 text-purple-950"> AI </span></h1>
                </div>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
 
                     {/* Image */}
                     <div className="my-4 md:col-span-2 lg:col-span-1 flex items-center justify-center flex-col relative ">
                         <img src={Hero2} alt="Hero Image" className="object-cover h-full max-h-[500px]"/>
-                        <CtaBtn title="Book Now" className="md:scale-125 md:-translate-y-12" />
+                        <CtaBtn title="Book Now" path='/trainers' className="md:scale-125 md:-translate-y-12" />
                     </div>
 
                     <div className="px-4 py-8 md:pt-0 grow flex flex-col lg:items-start lg:-order-1 items-center md:items-start">

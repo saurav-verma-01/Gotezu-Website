@@ -2,12 +2,14 @@ import React from 'react'
 
 import {FaRegCircleCheck, FaStar} from "react-icons/fa6";
 
+import {Link} from "react-router-dom";
+
 
 const TrainersCard = ({full_name, year_of_experience, skills, ratings, primary_image_file_url, total_views, category_name, search_keyword}) => {
 
     console.log(full_name, skills, search_keyword);
     return (
-        <div className="max-w-[300px] shadow-2xl relative h-full w-full">
+        <Link to="/individual-trainer" className="max-w-[300px] shadow-2xl relative h-full w-full bg-emerald-400">
 
                 <div
                     className="absolute -inset-2 rounded-2xl bg-gradient-to-bl from-purple-600 via-pink-600 to-lime-600 opacity-30 blur-xl"
@@ -37,7 +39,7 @@ const TrainersCard = ({full_name, year_of_experience, skills, ratings, primary_i
                 </div>
 
 
-        </div>
+        </Link>
     )
 }
 export default TrainersCard

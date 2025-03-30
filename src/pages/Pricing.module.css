@@ -2,13 +2,13 @@
 
 /* Base Styles */
 .header {
-    -webkit-font-smoothing: antialiased;
-    background-color: rgba(0, 0, 0, 0.8);
-    margin: 0;
+    /*-webkit-font-smoothing: antialiased;*/
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+    /*margin: 0;*/
 }
 
 .section {
-    color: #7a90ff;
+    /*color: #7a90ff;*/
     width: 100%;
     padding: 2em 0;
     min-height: 100%;
@@ -24,6 +24,7 @@
     justify-content: center;
     width: 100%;
     margin: 0 auto;
+    /*gap:1rem;*/
 }
 
 .pricingItem {
@@ -68,10 +69,12 @@
 .pricingFeatureList {
     /*text-align: left;*/
     margin: 0;
-    padding: 0.25em 2rem 2.5em;
-    list-style: none;
-    text-align: center;
-    font-weight: bolder;
+    /*padding: 0.25em 2rem 2.5em;*/
+    padding-inline: 3rem;
+    list-style: disc;
+    text-align: left;
+    /*font-weight: bolder;*/
+    color: black;
 }
 
 .pricingFeature {
@@ -81,7 +84,11 @@
 /* Pricing Decoration */
 .pricingDeco {
     border-radius: 10px 10px 0 0;
-    background: linear-gradient(135deg,#4097f9,#0af0c7);
+    /*background: linear-gradient(135deg,#4097f9,#0af0c7);*/
+    /*background: #E9FF7A;*/
+    /*background: #A2D729;*/
+    background: #E9FF7A;
+    color:#1E2D24;
     padding: 4em 0 9em;
     position: relative;
 }
@@ -95,11 +102,11 @@
 }
 
 .pricingTitle {
-    font-size: 0.75em;
+    font-size: 0.85em;
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: 5px;
-    color: #fff;
+    letter-spacing: 2px;
+    /*color: #fff;*/
 }
 
 .decoLayer {
@@ -134,11 +141,15 @@
     font-size: 3.5em;
     font-weight: bold;
     padding: 0;
-    color: #fff;
+    /*color: #fff;*/
     margin: 0 0 0.25em 0;
     line-height: 0.75;
+    color: #1E2D24;
 
 }
+/*.pricingItemFeatured .pricingPrice {*/
+/*    !*color: #FAFFFD;*!*/
+/*}*/
 
 .pricingCurrency {
     font-size: 0.15em;
@@ -167,12 +178,12 @@
 .header {
     position: relative;
     text-align: center;
-    background-image:
-            radial-gradient(circle at 39% 47%, rgba(107, 107, 107,0.08) 0%, rgba(107, 107, 107,0.08) 33.333%, rgba(72, 72, 72,0.08) 33.333%, rgba(72, 72, 72,0.08) 66.666%, rgba(36, 36, 36,0.08) 66.666%, rgba(36, 36, 36,0.08) 99.999%),
-            radial-gradient(circle at 53% 74%, rgba(182, 182, 182,0.08) 0%, rgba(182, 182, 182,0.08) 33.333%, rgba(202, 202, 202,0.08) 33.333%, rgba(202, 202, 202,0.08) 66.666%, rgba(221, 221, 221,0.08) 66.666%, rgba(221, 221, 221,0.08) 99.999%),
-            radial-gradient(circle at 14% 98%, rgba(184, 184, 184,0.08) 0%, rgba(184, 184, 184,0.08) 33.333%, rgba(96, 96, 96,0.08) 33.333%, rgba(96, 96, 96,0.08) 66.666%, rgba(7, 7, 7,0.08) 66.666%, rgba(7, 7, 7,0.08) 99.999%),
-            linear-gradient(45deg, rgb(97, 14, 117), rgb(20, 32, 127));
-    color: white;
+    /*background-image:*/
+    /*        radial-gradient(circle at 39% 47%, rgba(107, 107, 107,0.08) 0%, rgba(107, 107, 107,0.08) 33.333%, rgba(72, 72, 72,0.08) 33.333%, rgba(72, 72, 72,0.08) 66.666%, rgba(36, 36, 36,0.08) 66.666%, rgba(36, 36, 36,0.08) 99.999%),*/
+    /*        radial-gradient(circle at 53% 74%, rgba(182, 182, 182,0.08) 0%, rgba(182, 182, 182,0.08) 33.333%, rgba(202, 202, 202,0.08) 33.333%, rgba(202, 202, 202,0.08) 66.666%, rgba(221, 221, 221,0.08) 66.666%, rgba(221, 221, 221,0.08) 99.999%),*/
+    /*        radial-gradient(circle at 14% 98%, rgba(184, 184, 184,0.08) 0%, rgba(184, 184, 184,0.08) 33.333%, rgba(96, 96, 96,0.08) 33.333%, rgba(96, 96, 96,0.08) 66.666%, rgba(7, 7, 7,0.08) 66.666%, rgba(7, 7, 7,0.08) 99.999%),*/
+    /*        linear-gradient(45deg, rgb(97, 14, 117), rgb(20, 32, 127));*/
+    /*color: white;*/
 }
 
 .innerHeader {

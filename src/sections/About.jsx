@@ -3,6 +3,7 @@ import About1 from '../assets/About1.png';
 import About2 from '../assets/About2.png';
 import { FaRobot, FaSearch, FaUsers, FaChartLine } from "react-icons/fa";
 import CtaBtn from "../components/CtaBtn.jsx";
+import AboutCard from "./AboutCard.jsx";
 
 const About = () => {
     return (
@@ -21,52 +22,17 @@ const About = () => {
                 </div>
                 <div className="px-4 flex flex-col items-center justify-center gap-4">
                     <div className="flex flex-col gap-8 items-center my-8 md:grid md:grid-cols-2 place-items-center">
-                            <div className="about-card w-full h-full md:place-self-end">
-                                <div
-                                    className="absolute -inset-2 rounded-lg bg-gradient-to-r from-blue-600 via-violet-600 to-teal-600 opacity-50 blur-2xl"
-                                ></div>
-                                <div className="relative flex flex-col w-full h-64 items-start justify-start border-2 border-fuchsia-600 rounded-lg p-4 bg-white gap-4 h-full">
-                                    <FaRobot className="w-10 h-10" />
-                                    <h3 className="card-title">Ask AI or Explore Yourself</h3>
-                                    <p className="card-text text-left">Not sure where to start? Tell our AI what you need, and it will match you with the best trainers. Want full control? Browse, compare, and choose for yourself.</p>
-                                </div>
-                            </div>
+                        <AboutCard title="Ask AI or Explore Yourself" desc="Not sure where to start? Tell our AI what you need, and it will match you with the best trainers. Want full control? Browse, compare, and choose for yourself." icon={FaRobot} />
 
-                        <div className="about-card w-full h-full md:place-self-start">
-                            <div
-                                className="absolute -inset-2 rounded-lg bg-gradient-to-r from-blue-600 via-violet-600 to-teal-600 opacity-40 blur-xl"
-                            ></div>
-                            <div className="relative flex flex-col w-full h-64 items-start justify-start border-2 border-fuchsia-600 rounded-lg p-4 bg-white gap-4 h-full">
-                                <FaSearch className="w-10 h-10" />
-                                <h3 className="card-title">Get the Best Matches Instantly</h3>
-                                <p className="card-text text-left">Our AI understands your requirements and picks the most suitable trainers for you. No scrolling through endless options—just the right experts, ready to train your team.</p>
-                            </div>
-                        </div>
+                        <AboutCard title="Get the Best Matches Instantly" desc="Our AI understands your requirements and picks the most suitable trainers for you. No scrolling through endless options—just the right experts, ready to train your team." icon={FaSearch} />
 
-                        <div className="about-card w-full h-full md:place-self-end">
-                            <div
-                                className="absolute -inset-2 rounded-lg bg-gradient-to-r from-blue-600 via-violet-600 to-teal-600 opacity-40 blur-xl"
-                            ></div>
-                            <div className="relative flex flex-col w-full h-64 items-start justify-start border-2 border-fuchsia-600 rounded-lg p-4 bg-white gap-4 h-full">
-                                <FaUsers className="w-10 h-10" />
-                                <h3 className="card-title">Connect & Customize</h3>
-                                <p className="card-text text-left">Once you find the right trainer, discuss your goals, customize the approach, and fine-tune the training to fit your team’s needs.</p>
-                            </div>
-                        </div>
+                        <AboutCard title="Connect & Customize" desc="Once you find the right trainer, discuss your goals, customize the approach, and fine-tune the training to fit your team’s needs." icon={FaUsers} />
 
-                        <div className="about-card w-full h-full md:place-self-start">
-                            <div
-                                className="absolute -inset-2 rounded-lg bg-gradient-to-r from-blue-600 via-violet-600 to-teal-600 opacity-40 blur-xl"
-                            ></div>
-                            <div className="relative flex flex-col w-full h-64 items-start justify-start border-2 border-fuchsia-600 rounded-lg p-4 bg-white gap-4 h-full">
-                                <FaChartLine className="w-10 h-10" />
-                                <h3 className="card-title">Train, Grow & Succeed</h3>
-                                <p className="card-text text-left">Now comes the real change. Whether it’s sharpening skills, improving efficiency, or building stronger leaders, the right trainer will help you make all the difference in your organization.</p>
-                            </div>
-                        </div>
+                        <AboutCard title="Train, Grow & Succeed" desc="Now comes the real change. Whether it’s sharpening skills, improving efficiency, or building stronger leaders, the right trainer will help you make all the difference in your organization." icon={FaChartLine} />
+
                     </div>
 
-                    <CtaBtn title="Learn More" />
+                    <CtaBtn title="Learn More" path='/about' />
 
                 </div>
             </div>

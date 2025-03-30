@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, {useState, useContext, useEffect} from "react";
 import { IoSearch } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { AppwriteContext } from "../context/AppwriteContext";
@@ -7,6 +7,16 @@ const SearchBar = ({ className = "" }) => {
     const [query, setQuery] = useState("");
     const navigate = useNavigate();
     const { updateQuery } = useContext(AppwriteContext);
+
+    // Debug code
+    // useEffect(() => {
+    //     // console.log("Current environment variables:", {
+    //     //     endpoint: import.meta.env.VITE_APPWRITE_ENDPOINT,
+    //     //     projectId: import.meta.env.VITE_APPWRITE_PROJECT_ID,
+    //     //     databaseId: import.meta.env.VITE_APPWRITE_DATABASE_ID,
+    //     //     collectionId: import.meta.env.VITE_APPWRITE_COLLECTION_ID
+    //     // });
+    // }, []);
 
     // Handle Search Submission
     const handleSubmit = (e) => {

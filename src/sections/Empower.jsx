@@ -1,13 +1,22 @@
 import React from 'react'
 import Empower1 from '../assets/Empower1.png';
 
+import { motion } from 'framer-motion';
+
 const Empower = () => {
     return (
-        <section className="my-8">
+        <section className="my-8" whileHover="hover" initial="initial">
             <div className=" px-4 md:px-2 flex flex-col gap-8 items-center justify-center lg:flex-row lg:justify-center lg:items-center relative max-w-7xl mx-auto">
-                <div className="w-full h-full lg:p-8  max-w-2xl rounded-md flex items-center justify-center">
-                    <img src={Empower1} alt="Empower Picture" className="max-h-140 lg:max-h-full" />
-                </div>
+                <motion.div className="w-full h-full lg:p-8  max-w-2xl rounded-md flex items-center justify-center"
+                            whileHover={{
+                                rotate: 2,
+                                transition: { duration: 0.3, ease: "easeOut" }
+                            }}>
+                    <motion.img src={Empower1} alt="Empower Picture" className="max-h-140 lg:max-h-full" whileHover={{
+                        boxShadow: "0 10px 25px -5px #E9FF7A",
+                        transition: { duration: 0.3 }
+                    }} />
+                </motion.div>
 
                 <div className="flex flex-col gap-8 items-center justify-center md:flex-row md:flex-wrap lg:justify-start py-4">
                     {[
@@ -17,9 +26,9 @@ const Empower = () => {
                     ].map(({ title, text }, index) => (
                         <div className="features-card" key={index}>
                             <div
-                                className="absolute -inset-2 rounded-lg bg-gradient-to-tr from-slate-600 via-yellow-600 to-green-600 opacity-50 blur-2xl w-full h-full"
+                                className="absolute -inset-2 rounded-lg bg-gradient-to-tr from-slate-600 via-yellow-600 to-green-600 opacity-50 blur-2xl w-full h-full hover:opacity-80"
                             ></div>
-                            <div className="relative w-full h-auto border-2 border-accent rounded-lg bg-white text-purple-heart-950 py-8 px-5 flex flex-col gap-4">
+                            <div className="relative w-full h-auto border-3 border-transparent hover:border-accent rounded-lg bg-white text-purple-heart-950 py-8 px-5 flex flex-col gap-4">
                                 <h3 className="feature-card-title">{title}</h3>
                                 <p className="card-text text-left md:text-base flex-grow">{text}</p>
                             </div>

@@ -3,7 +3,10 @@ import styles from './Pricing.module.css';
 
 const PricingPage = () => {
     return (
-        <div className={styles.header}>
+        <div className={`${styles.header}`} style={{
+            background: "rgb(23,0,36)",
+            backgroundImage: "linear-gradient(90deg, rgba(23,0,36,1) 0%, rgba(121,9,115,1) 37%, rgba(255,0,125,1) 100%)"
+        }}>
             <div className={`${styles.innerHeader} ${styles.flex}`}>
                 <section className={styles.section}>
                     <h1 className="text-6xl py-8 mb-8 lg:mb-16 text-center text-purple-heart-50 font-semibold">
@@ -102,7 +105,7 @@ const PricingPage = () => {
                                     />
                                 </svg>
                                 <div className={styles.pricingPrice}>
-                                    <span className={styles.pricingCurrency}>₹</span>20,000
+                                    <span className={styles.pricingCurrency}>₹</span>19,999
                                     <span className={styles.pricingPeriod}>/ month</span>
                                 </div>
                                 <h3 className={styles.pricingTitle}>The Elite Pro Package</h3>
@@ -153,7 +156,7 @@ const PricingPage = () => {
                                     />
                                 </svg>
                                 <div className={styles.pricingPrice}>
-                                    <span className={styles.pricingCurrency}>₹</span>1,50,000
+                                    <span className={styles.pricingCurrency}>₹</span>1,49,999
                                     <span className={styles.pricingPeriod}>/ month</span>
                                 </div>
                                 <h3 className={styles.pricingTitle}>The Celestial Trainer Package</h3>

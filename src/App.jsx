@@ -8,6 +8,7 @@ import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} fr
 import RootLayout from "./Layout/RootLayout.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
 import Signup from "./pages/Signup.jsx";
+import IndividualTrainer from "./pages/IndividualTrainer.jsx";
 
 const App = () => {
     const router  = createBrowserRouter([
@@ -37,7 +38,11 @@ const App = () => {
                 },
                 {
                     path: "signin",
-                    element: <Signup />
+                    element: <Signup />,
+                },
+                {
+                    path: 'individual-trainer',
+                    element: <IndividualTrainer />
                 }
             ]
         }

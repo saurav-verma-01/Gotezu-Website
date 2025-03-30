@@ -10,6 +10,7 @@ import Faqs from "../sections/Faqs.jsx";
 import Contacts from "../sections/Contacts.jsx";
 
 
+
 const Home = () => {
     return (
         <>

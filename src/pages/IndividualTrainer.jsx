@@ -6,9 +6,9 @@ import Footer from "../sections/Footer.jsx";
 const IndividualTrainer = () => {
     return (
         <section>
-            <NavBar />
+            {/*<NavBar />*/}
             <IndividualTrainersHero />
-            <Footer />
+            {/*<Footer />*/}
         </section>
     )
 }
