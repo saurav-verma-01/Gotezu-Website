@@ -1,3 +1,4 @@
+/*
 import React, {useState} from 'react'
 import FilterBtn from "../components/FilterBtn.jsx";
 import { FaChevronDown } from "react-icons/fa";
@@ -61,7 +62,7 @@ const ExploreAllTrainers = () => {
                                                 </option>
                                             ))}
                                         </select>
-                                        {/* Custom Dropdown Arrow */}
+                                        {// Custom Dropdown Arrow }
                                         <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
                                             <FaChevronDown className="w-5 h-5 text-[#F4FF74]" />
                                         </div>
@@ -74,6 +75,117 @@ const ExploreAllTrainers = () => {
                             </div>
                         </div>
 
+                    </div>
+                    <TrainersContainer />
+                </div>
+            </div>
+        </section>
+    )
+}
+export default ExploreAllTrainers
+
+*/
+
+import React, {useState, useContext} from 'react'
+import FilterBtn from "../components/FilterBtn.jsx";
+import { FaChevronDown } from "react-icons/fa";
+import TrainersContainer from "../components/TrainersContainer.jsx";
+import { FirebaseContext } from "../context/FirebaseContext.jsx";
+
+const categories = [
+    "Soft Skills",
+    "Technical IT",
+    "Personal Development",
+    "Sales Capability Development",
+    "Functional Skills",
+    "Miscellaneous"
+];
+
+const ExploreAllTrainers = () => {
+    const [selected, setSelected] = useState("");
+    const { applyFilter, applyCategory, resetFilters, activeFilter, activeCategory } = useContext(FirebaseContext);
+    
+    const handleCategorySelect = (e) => {
+        const category = e.target.value;
+        setSelected(category);
+        if (category) {
+            applyCategory(category);
+        }
+    };
+
+    const handleCategoryClick = (category) => {
+        applyCategory(category);
+    };
+
+    return (
+        <section className="max-w-[1440px] mx-auto ">
+            <div className="w-full mx-auto ">
+                <div className="py-8 pt-4 flex items-center justify-center">
+                    <h1 className="subheading">Explore Our Trainers</h1>
+                </div>
+
+                <div className="flex flex-col lg:flex-row items-center lg:items-start  justify-center gap-8 xl:gap-5 ">
+                    <div className="py-8 pb-12 text-honeysuckle-100 px-4 bg-gradient rounded-xl w-full max-w-sm lg:min-w-xs">
+                        <div className="max-w-sm mx-auto flex flex-col gap-6">
+                            <div className="flex px-4 py-4 justify-between items-center">
+                                <h3 className="text-2xl font-semibold">Filters</h3>
+                                <button 
+                                    onClick={resetFilters}
+                                    className="text-accent font-semibold border-b-1 hover:text-honeysuckle-100 hover:border-white transition duration-200 boder-accent"
+                                >
+                                    Reset All
+                                </button>
+                            </div>
+                            {/* <div className="bg-black/30 py-4 px-4 rounded-md border-2 border-accent flex flex-col  gap-4">
+                                <h4 className="text-sm font-bold lg:border-b-2 border-white lg:pb-2 lg:text-lg max-w-max">Top Filters</h4>
+                                <div className="flex justify-start gap-2.5">
+                                    {["Top Rated", "Latest", "Popular"].map((item, i) =>(
+                                        <FilterBtn 
+                                            key={i} 
+                                            title={item} 
+                                            className="" 
+                                            active={activeFilter === item}
+                                            onClick={() => applyFilter(item)}
+                                        />
+                                    ) )}
+                                </div>
+                            </div> */}
+                            <div className="bg-black/30 py-4 px-4 rounded-md border-2 border-accent flex justify-between items-center flex-col lg:items-start">
+                                <h4 className="text-sm font-bold lg:border-b-2 border-white lg:pb-2 lg:text-lg max-w-max">Categories</h4>
+                                <div className="mt-8">
+                                    <div className="relative lg:hidden">
+                                        <select
+                                            className="w-full appearance-none bg-transparent placeholder:text-honeysuckle-300 text-accent text-sm border-3 border-accent pl-3 pr-8 py-2 rounded-full transition duration-300 ease focus:outline-none focus:border-honeysuckle-300 hover:border-purple-500 shadow-sm focus:shadow-md cursor-pointer hover:bg-purple-heart-800"
+                                            value={selected}
+                                            onChange={handleCategorySelect}
+                                        >
+                                            <option value="" className="text-purple-heart-950" disabled>Select a category</option>
+                                            {categories.map((category, index) => (
+                                                <option key={index} value={category} className="text-purple-heart-950">
+                                                    {category}
+                                                </option>
+                                            ))}
+                                        </select>
+                                        {/* Custom Dropdown Arrow */}
+                                        <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                                            <FaChevronDown className="w-5 h-5 text-[#F4FF74]" />
+                                        </div>
+                                    </div>
+
+                                    <div className="hidden lg:flex flex-wrap gap-4">
+                                        {categories.map((item, i) => (
+                                            <FilterBtn 
+                                                key={i} 
+                                                title={item} 
+                                                className="bg-white border-accent" 
+                                                active={activeCategory === item}
+                                                onClick={() => handleCategoryClick(item)}
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <TrainersContainer />
                 </div>
