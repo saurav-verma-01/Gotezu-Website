@@ -1,22 +1,12 @@
-import React, {useState, useContext, useEffect} from "react";
+import React, { useState, useContext } from "react";
 import { IoSearch } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import { AppwriteContext } from "../context/AppwriteContext";
+import { FirebaseContext } from "../context/FirebaseContext";
 
 const SearchBar = ({ className = "" }) => {
     const [query, setQuery] = useState("");
     const navigate = useNavigate();
-    const { updateQuery } = useContext(AppwriteContext);
-
-    // Debug code
-    // useEffect(() => {
-    //     // console.log("Current environment variables:", {
-    //     //     endpoint: import.meta.env.VITE_APPWRITE_ENDPOINT,
-    //     //     projectId: import.meta.env.VITE_APPWRITE_PROJECT_ID,
-    //     //     databaseId: import.meta.env.VITE_APPWRITE_DATABASE_ID,
-    //     //     collectionId: import.meta.env.VITE_APPWRITE_COLLECTION_ID
-    //     // });
-    // }, []);
+    const { updateQuery } = useContext(FirebaseContext);
 
     // Handle Search Submission
     const handleSubmit = (e) => {
@@ -43,7 +33,7 @@ const SearchBar = ({ className = "" }) => {
             />
             <button
                 type="submit"
-                className="bg-accent w-12 h-12 rounded-full flex items-center justify-center hover:bg-violet-600 hover:text-white transition duration-300"
+                className="bg-accent w-12 h-12 rounded-full flex items-center justify-center hover:bg-violet-600 hover:text-white text-purple-900 transition duration-300"
             >
                 <IoSearch className="w-8 h-8" />
             </button>

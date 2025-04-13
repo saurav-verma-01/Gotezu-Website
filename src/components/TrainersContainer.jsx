@@ -1,15 +1,18 @@
 import React, { useContext, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import TrainersCard from "./TrainersCard.jsx";
-import { AppwriteContext } from "../context/AppwriteContext.jsx";
+// import { AppwriteContext } from "../context/AppwriteContext.jsx";
+import { FirebaseContext } from "../context/FirebaseContext.jsx";
 import CardLoader from "./CardLoader.jsx";
 
 const TrainersContainer = () => {
-    const { searchResults, loading, error } = useContext(AppwriteContext);
+    // const { searchResults, loading, error } = useContext(AppwriteContext);
+    const { searchResults, loading, error } = useContext(FirebaseContext);
+    // const [searchParams] = useSearchParams();
     const [searchParams] = useSearchParams();
 
     // Extract the search query from the URL
-    const query = searchParams.get("search");
+    // const query = searchParams.get("search");
 
 
     if (error) {

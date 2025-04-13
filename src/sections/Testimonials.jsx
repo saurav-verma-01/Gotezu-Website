@@ -101,7 +101,7 @@ const Testimonials = () => {
                             y:  ["0%", "-50%"],
                         }}
                         transition={{
-                            duration: 20,
+                            duration: 15,
                             repeat: Infinity,
                             ease: "linear",
                             repeatType: "loop"
@@ -120,7 +120,7 @@ const Testimonials = () => {
 
                         }}
                          transition={{
-                             duration: 15,
+                             duration: 12,
                              repeat: Infinity,
                              ease: "linear",
                              repeatType: "loop"
@@ -137,7 +137,7 @@ const Testimonials = () => {
                              y: ["0%", "-50%"],
                          }}
                          transition={{
-                             duration: 25,
+                             duration: 20,
                              repeat: Infinity,
                              ease: "linear",
                              repeatType: "loop"
