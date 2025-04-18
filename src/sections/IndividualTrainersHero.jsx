@@ -9,20 +9,20 @@ import CtaBtn from "../components/CtaBtn.jsx";
 import SocialIconBox from "../components/SocialIconBox.jsx";
 import { useLocation } from "react-router-dom";
 
-function capitalizeText(text) {
-    return text
-      .toLowerCase()
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
-  }
+// function capitalizeText(text) {
+//     return text
+//       .toLowerCase()
+//       .split(' ')
+//       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+//       .join(' ');
+//   }
 
+ 
 const IndividualTrainersHero = () => {
     const { state } = useLocation();
 
     const {
         full_name,
-        year_of_experience,
         primary_skill,
         star_rating,
         primary_image_public_url,
@@ -32,6 +32,9 @@ const IndividualTrainersHero = () => {
         languages,
         location_name
       } = state || {};  // fallback in case state is undefined
+
+    //   console.log("Very Urgent -      ----------------------------------------------")
+    //   console.log(long_profile_description)
 
     return (
        <section className="lg:p-8 ">
@@ -70,7 +73,7 @@ const IndividualTrainersHero = () => {
 
                    <div className="bg-black/60 text-white p-8 px-5 text-sm md:text-base rounded-xl border-2 border-accent pb-4">
                        <div className="flex flex-col gap-6 md:gap-8">
-                        {long_profile_description}
+                        {long_profile_description.replace(/<\/?p>/g, '')}
                        
                        </div>
                        <div className="my-6 flex flex-col gap-4 md:gap-6">
