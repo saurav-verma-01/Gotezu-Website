@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ITHeroImg from '../assets/IndividualTrainer.png';
 import { GoCheckCircle } from "react-icons/go";
 import { FaStar } from "react-icons/fa";
@@ -8,18 +8,13 @@ import { IoLanguage } from "react-icons/io5";
 import CtaBtn from "../components/CtaBtn.jsx";
 import SocialIconBox from "../components/SocialIconBox.jsx";
 import { useLocation } from "react-router-dom";
-
-// function capitalizeText(text) {
-//     return text
-//       .toLowerCase()
-//       .split(' ')
-//       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-//       .join(' ');
-//   }
-
+import TrainerHiringForm from '../components/HiringComponent.jsx';
+import {motion} from "framer-motion";
+import { PiCaretCircleDoubleRightLight } from "react-icons/pi";
  
 const IndividualTrainersHero = () => {
     const { state } = useLocation();
+    const [showHiringForm, setShowHiringForm] = useState(false);
 
     const {
         full_name,
@@ -33,11 +28,25 @@ const IndividualTrainersHero = () => {
         location_name
       } = state || {};  // fallback in case state is undefined
 
-    //   console.log("Very Urgent -      ----------------------------------------------")
-    //   console.log(long_profile_description)
+       // Create trainer object to pass to the form
+        const trainer = {
+            name: full_name,
+            category: category_name,
+            skill: primary_skill
+            // Add any other fields you want to pass
+        };
 
     return (
        <section className="lg:p-8 ">
+
+        {/* ADD THE FORM COMPONENT RIGHT HERE - AT THE ROOT LEVEL */}
+        {showHiringForm && (
+                    <TrainerHiringForm
+                    trainer={trainer}
+                    onClose={() => setShowHiringForm(false)}
+                    />
+                )}
+
            <div className="lg:rounded-xl bg-gradient flex flex-col items-center py-8 px-3 md:flex-row gap-8 md:items-start justify-center">
                <div className="bg-accent max-w-md  w-full p-4 px-3 rounded-2xl border-2 border-purple-heart-950">
                    <div className="flex items-center justify-center max-w-[400px] mx-auto">
@@ -73,7 +82,7 @@ const IndividualTrainersHero = () => {
 
                    <div className="bg-black/60 text-white p-8 px-5 text-sm md:text-base rounded-xl border-2 border-accent pb-4">
                        <div className="flex flex-col gap-6 md:gap-8">
-                        {long_profile_description.replace(/<\/?p>/g, '')}
+                        {long_profile_description && long_profile_description.replace(/<\/?p>/g, '')}
                        
                        </div>
                        <div className="my-6 flex flex-col gap-4 md:gap-6">
@@ -82,7 +91,42 @@ const IndividualTrainersHero = () => {
                        </div>
                    </div>
                    <div className="flex max-w-md items-center justify-center w-full">
-                       <CtaBtn title="Hire Me" className="my-0" />
+                       <button title="Hire Me" className={`cta-btn text-4xl `}
+                       onClick={() => setShowHiringForm(true)} >
+                        <motion.div
+                className="relative block overflow-hidden whitespace-nowrap"
+                initial="initial"
+                whileHover="hovered"
+                style={{ display: "inline-block" }}
+            >
+                <motion.div
+                    variants={{
+                        initial: {y: 0},
+                        hovered: {y: "-100%"},
+                    }}
+                    className="cta-btn-text"
+
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                >
+                    Hire Me!
+                </motion.div>
+
+                <motion.div
+                    className="absolute inset-0 cta-btn-text"
+                    variants={{
+                        initial: { y: "100%" },
+                        hovered: { y: 0 },
+                    }}
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                >
+                    Hire Me!
+                </motion.div>
+
+            </motion.div>
+            <div className="bg-black/90 w-12 h-12 rounded-full flex items-center justify-center text-accent">
+                <PiCaretCircleDoubleRightLight className="w-10 h-10" />
+            </div>
+                       </button>
                    </div>
                </div>
            </div>
